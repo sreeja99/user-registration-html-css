@@ -78,7 +78,7 @@
         const phone = document.getElementById("tel");
         const phoneError = document.querySelector(".tel-error");
         phone.addEventListener('input',function(){
-            let phoneRegex = RegExp("^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+)([.][a-z]+)?[.][a-z]{2,}$")
+            let phoneRegex =  RegExp("^[0-9]{1,}[ ][1-9]{1}[0-9]{9}$");
             if(phoneRegex.test(phone.value))
                 phoneError.textContent = "";
             else
@@ -87,7 +87,7 @@
         const password = document.getElementById("pwd");
         const passwordError = document.querySelector(".pwd-error");
         password.addEventListener("input",function(){
-            let passwordRegex = RegExp(".{8,}");
+            let passwordRegex = RegExp("^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+)([.][a-z]+)?[.][a-z]{2,}$")
             if(passwordRegex.test(password.value))
                 passwordError.textContent = "";
             else 
